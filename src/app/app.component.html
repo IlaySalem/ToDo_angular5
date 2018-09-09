@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <mat-card>
+    <form (submit)="submit()" [formGroup]="form" novalidate>
+      <mat-form-field>
+        <input placeholder="Описание" matInput formControlName="task">
+      </mat-form-field>
+
+      <button mat-raised-button>Добавить</button>
+    </form>
+  </mat-card>
+  <div *ngFor="let task of tasks" class="task-list">
+    <mat-card class="task-item"  >
+      <span>{{task}}</span>
+    </mat-card>
+
+  </div>
+</div>
